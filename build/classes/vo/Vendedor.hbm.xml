@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/09/2012 17:52:15 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Vendedor" table="isc_vendors">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="vendorid" />
+            <generator class="identity" />
+        </id>
+       
+        <property name="telefone" type="string">
+            <column name="vendorphone" length="50" />
+        </property>
+      
+        <property name="nome" type="string">
+            <column name="vendorname" length="200" />
+        </property>
+
+        <property name="cidade" type="string">
+            <column name="vendorcity" length="100" />
+        </property>
+
+        <property name="pais" type="string">
+            <column name="vendorcountry" length="100" />
+        </property>        
+       
+        <property name="estado" type="string">
+            <column name="vendorstate" length="100" />
+        </property>       
+       
+        <property name="cep" type="string">
+            <column name="vendorzip" length="20" />
+        </property>        
+       
+        <property name="email" type="string">
+            <column name="vendoremail" length="200" />
+        </property>       
+       
+        <property name="descricao" type="text">
+            <column name="vendorbio"/>
+        </property>       
+    
+        <property name="comissao" type="double">
+            <column name="vendorprofitmargin"/>
+        </property>        
+               
+    </class>
+</hibernate-mapping>

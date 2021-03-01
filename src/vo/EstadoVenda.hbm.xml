@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.EstadoVenda" table="isc_order_status">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="statusid" />
+            <generator class="identity" />
+        </id>
+            
+        <property name="nome" type="string">
+            <column name="statusdesc" length="100" />
+        </property>   
+            
+        <property name="ordem" type="integer">
+            <column name="statusorder"/>
+        </property>                                                       
+                                                                                                                                       
+    </class>
+</hibernate-mapping>

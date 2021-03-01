@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/09/2012 17:52:15 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.ItemVariacao" table="isc_product_variation_options">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="voptionid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="variacao" class="vo.Variacao" fetch="select">
+            <column name="vovariationid" />
+        </many-to-one>                   
+        <property name="nome" type="string">
+            <column name="voname" length="255" />
+        </property>
+        <property name="valor" type="text">
+            <column name="vovalue"/>
+        </property>
+        <property name="ordem_nome" type="integer">
+            <column name="vooptionsort"/>
+        </property>   
+        <property name="ordem_valor" type="integer">
+            <column name="vovaluesort"/>
+        </property>               
+    </class>
+</hibernate-mapping>

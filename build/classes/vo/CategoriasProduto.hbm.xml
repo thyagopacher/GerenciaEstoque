@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/09/2012 17:52:15 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.CategoriasProduto" table="isc_categoryassociations">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="associationid" />
+            <generator class="identity" />
+        </id>
+        
+        <many-to-one name="produto" class="vo.Produto" fetch="select">
+            <column name="productid" />
+        </many-to-one>   
+         
+        <many-to-one name="categoria" class="vo.CategoriaProduto" fetch="select">
+            <column name="categoryid" />
+        </many-to-one>     
+    </class>
+</hibernate-mapping>

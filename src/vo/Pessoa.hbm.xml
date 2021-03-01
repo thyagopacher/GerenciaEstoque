@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/09/2012 17:52:15 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Pessoa" table="isc_customers">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="customerid" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="nascimento" type="date">
+            <column name="nascimento" length="10" />
+        </property>
+               
+        <property name="telefone" type="string">
+            <column name="custconphone" length="50" />
+        </property>
+        
+        <property name="telefone2" type="string">
+            <column name="telefone2" length="50" />
+        </property>        
+        
+        <property name="nome" type="string">
+            <column name="custconfirstname" length="100" />
+        </property>
+
+        <property name="sobrenome" type="string">
+            <column name="custconlastname" length="100" />
+        </property> 
+
+        <property name="cpf" type="string">
+            <column name="custconcompany" length="255" />
+        </property>
+        
+        <property name="rg" type="string">
+            <column name="rg" length="50" />
+        </property>        
+        
+        <property name="senha" type="string">
+            <column name="custpassword" length="50" />
+        </property>
+        
+        <property name="email" type="string">
+            <column name="custconemail" length="250" />
+        </property>        
+              
+        <many-to-one name="tipo" class="vo.TipoPessoa" fetch="select">
+            <column name="codtipo" />
+        </many-to-one>               
+                 
+    </class>
+</hibernate-mapping>

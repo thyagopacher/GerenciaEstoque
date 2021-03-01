@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.ItemCompra" table="isc_country_states">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="stateid" />
+            <generator class="identity" />
+        </id>
+
+        <property name="quantidade" type="integer">
+            <column name="statename"/>
+        </property>  
+        <many-to-one name="comprar" class="vo.Comprar" fetch="select">
+            <column name="codcompra" />
+        </many-to-one>         
+        <many-to-one name="produto" class="vo.Produto" fetch="select">
+            <column name="codproduto" />
+        </many-to-one>          
+        <property name="valor" type="double">
+            <column name="valor"/>
+        </property>                     
+    </class>
+</hibernate-mapping>

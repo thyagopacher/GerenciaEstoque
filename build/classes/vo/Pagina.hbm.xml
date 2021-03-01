@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Pagina" table="isc_pages">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="pageid" />
+            <generator class="identity" />
+        </id>
+        <property name="metatitulo" type="string">
+            <column name="pagemetatitle" length="250" />
+        </property>
+        <property name="titulo" type="string">
+            <column name="pagetitle" length="250" />
+        </property>   
+        <property name="palavrachave" type="text">
+            <column name="pagekeywords"/>
+        </property>  
+        <property name="conteudo" type="text">
+            <column name="pagecontent"/>
+        </property>                            
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Venda" table="isc_orders">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="orderid" />
+            <generator class="identity" />
+        </id>
+
+        <many-to-one name="pessoa" class="vo.Pessoa" fetch="select">
+            <column name="ordcustid" />
+        </many-to-one>      
+
+        <many-to-one name="estadovenda" class="vo.EstadoVenda" fetch="select">
+            <column name="ordstatus" />
+        </many-to-one>  
+
+        <property name="data" type="date">
+            <column name="data" />
+        </property>              
+
+        <property name="vencimento" type="date">
+            <column name="vencimento" />
+        </property>                                                                                   
+    
+        <property name="valor" type="double">
+            <column name="ordsubtotal"/>
+        </property>              
+                      
+        <property name="frete" type="double">
+            <column name="ordshipcost"/>
+        </property>   
+      
+        <property name="parcela" type="integer">
+            <column name="parcela"/>
+        </property>              
+                        
+        <property name="envio" type="string">
+            <column name="ordshipmethod" length="50" />
+        </property>   
+        
+        <property name="codvendedor" type="integer">
+            <column name="codvendedor"/>
+        </property>                                                        
+    </class>
+</hibernate-mapping>

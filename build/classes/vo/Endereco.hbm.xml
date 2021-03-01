@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Endereco" table="isc_shipping_addresses">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="shipid" />
+            <generator class="identity" />
+        </id>
+        
+        <many-to-one name="pessoa" class="vo.Pessoa" fetch="select">
+            <column name="shipcustomerid" />
+        </many-to-one>      
+        
+        <many-to-one name="estado" class="vo.Estado" fetch="select">
+            <column name="shipstateid" />
+        </many-to-one>            
+        
+        <property name="cidade" type="string">
+            <column name="shipcity" length="100" />
+        </property>        
+        
+        <property name="endereco" type="text">
+            <column name="shipaddress1"/>
+        </property>
+    
+        <property name="cep" type="string">
+            <column name="shipzip" length="30" />
+        </property>              
+           
+        <property name="bairro" type="string">
+            <column name="shipaddress2" length="50" />
+        </property>                           
+                                                  
+    </class>
+</hibernate-mapping>

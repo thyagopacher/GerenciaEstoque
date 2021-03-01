@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Loja" table="loja">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="codigo" />
+            <generator class="identity" />
+        </id>
+
+        <property name="site" type="text">
+            <column name="site"/>
+        </property>
+        
+        <property name="linkftp" type="text">
+            <column name="linkftp"/>
+        </property>         
+       
+        <property name="login" type="string">
+            <column name="login" length="50" />
+        </property>          
+       
+        <property name="senha" type="string">
+            <column name="senha" length="10" />
+        </property>         
+       
+    </class>
+</hibernate-mapping>

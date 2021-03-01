@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/10/2012 17:47:11 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Pais" table="isc_countries">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="countryid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="regiao" class="vo.Regiao" fetch="select">
+            <column name="countrycouregid" />
+        </many-to-one>    
+        <property name="nome" type="string">
+            <column name="countryname" length="255" />
+        </property>
+        <property name="sigla" type="string">
+            <column name="countryiso3" length="3" />
+        </property>        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/09/2012 17:52:15 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Usuario" table="isc_users">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="pk_userid" />
+            <generator class="identity" />
+        </id>
+       
+        <property name="usuario" type="string">
+            <column name="username" length="50" />
+        </property>
+      
+        <property name="senha" type="string">
+            <column name="senha" length="50" />
+        </property>
+
+        <property name="primeironome" type="string">
+            <column name="userfirstname" length="50" />
+        </property>
+
+        <property name="ultimonome" type="string">
+            <column name="userlastname" length="50" />
+        </property>        
+       
+        <property name="estado" type="integer">
+            <column name="userstatus"/>
+        </property>       
+       
+        <property name="email" type="string">
+            <column name="useremail" length="250" />
+        </property>        
+       
+        <property name="importsenha" type="string">
+            <column name="userimportpass" length="100" />
+        </property>       
+       
+        <property name="token" type="string">
+            <column name="token" length="50" />
+        </property>       
+       
+        <property name="usertoken" type="string">
+            <column name="usertoken" length="50" />
+        </property>         
+       
+        <property name="userapi" type="integer">
+            <column name="userapi"/>
+        </property>           
+     
+        <property name="codvendedor" type="integer">
+            <column name="uservendorid"/>
+        </property>       
+
+        <property name="userrole" type="string">
+            <column name="userrole" length="50" />
+        </property>       
+        
+    </class>
+</hibernate-mapping>

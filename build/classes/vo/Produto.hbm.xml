@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/09/2012 17:52:15 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="vo.Produto" table="isc_products">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="productid" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="nome" type="string">
+            <column name="prodname" length="250" />
+        </property>
+
+        <property name="preconormal" type="double">
+            <column name="prodprice" />
+        </property> 
+
+        <property name="precovenda" type="double">
+            <column name="prodsaleprice" />
+        </property> 
+
+        <property name="precocusto" type="double">
+            <column name="prodcostprice" />
+        </property> 
+
+        <property name="precovarejo" type="double">
+            <column name="prodretailprice" />
+        </property> 
+
+        <property name="quantidade" type="integer">
+            <column name="prodcurrentinv" />
+        </property> 
+        
+        <property name="estoquebaixo" type="integer">
+            <column name="prodlowinv" />
+        </property>         
+    
+        <property name="peso" type="double">
+            <column name="prodweight" />
+        </property>           
+                
+        <property name="largura" type="double">
+            <column name="prodwidth" />
+        </property>                
+                          
+        <property name="altura" type="double">
+            <column name="prodheight" />
+        </property>                                   
+                  
+        <property name="profundidade" type="double">
+            <column name="proddepth" />
+        </property>                                             
+                                                                                                
+        <many-to-one name="categoria" class="vo.CategoriaProduto" fetch="select">
+            <column name="prodcatids" />
+        </many-to-one>                
+        
+        <many-to-one name="fabrica" class="vo.Pessoa" fetch="select">
+            <column name="codfornecedor" />
+        </many-to-one>                             
+                 
+        <property name="codigobarra" type="string">
+            <column name="codigobarra" length="100" />
+        </property>                
+      
+        <property name="palavrachave" type="text">
+            <column name="prodmetakeywords"/>
+        </property>                          
+          
+        <property name="produtovisivel" type="integer">
+            <column name="prodvisible"/>
+        </property>                                                                     
+        
+        <property name="caracteristicavisivel" type="integer">
+            <column name="prodfeatured"/>
+        </property>                                                                                                                                                                                          
+         
+        <property name="codvendedor" type="integer">
+            <column name="prodvendorid"/>
+        </property>               
+                        
+        <property name="precofinal" type="double">
+            <column name="prodcalculatedprice"/>
+        </property>     
+        
+        <property name="desconto" type="double">
+            <column name="desconto"/>
+        </property>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    </class>
+</hibernate-mapping>

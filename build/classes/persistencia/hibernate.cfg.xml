@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://mysql.almagemeaesotericos.com.br:3306/almagemeaesote</property>
+    <property name="hibernate.connection.username">almagemeaesote</property>
+    <property name="hibernate.connection.password">bcsite</property>
+    <property name="hibernate.bytecode.use_reflection_optimizer">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping resource="vo/Pessoa.hbm.xml"/>
+    <mapping resource="vo/Produto.hbm.xml"/>
+    <mapping resource="vo/CategoriaProduto.hbm.xml"/>
+    <mapping resource="vo/ImagemProduto.hbm.xml"/>
+    <mapping resource="vo/TipoPessoa.hbm.xml"/>
+    <mapping resource="vo/Pais.hbm.xml"/>
+    <mapping resource="vo/Estado.hbm.xml"/>
+    <mapping resource="vo/Endereco.hbm.xml"/>
+    <mapping resource="vo/Regiao.hbm.xml"/>
+    <mapping resource="vo/Conta.hbm.xml"/>
+    <mapping resource="vo/EstadoVenda.hbm.xml"/>
+    <mapping resource="vo/Venda.hbm.xml"/>
+    <mapping resource="vo/ItemVenda.hbm.xml"/>
+    <mapping resource="vo/Comprar.hbm.xml"/>
+    <mapping resource="vo/ItemCompra.hbm.xml"/>
+    <mapping resource="vo/Pagina.hbm.xml"/>
+    <mapping resource="vo/Desconto.hbm.xml"/>
+    <mapping resource="vo/Loja.hbm.xml"/>
+    <mapping resource="vo/CategoriasProduto.hbm.xml"/>
+    <mapping resource="vo/Variacao.hbm.xml"/>
+    <mapping resource="vo/ItemVariacao.hbm.xml"/>
+    <mapping resource="vo/FormaPagamento.hbm.xml"/>
+    <mapping resource="vo/Vendedor.hbm.xml"/>
+    <mapping resource="vo/Usuario.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
